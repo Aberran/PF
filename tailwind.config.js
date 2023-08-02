@@ -22,9 +22,12 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: '#131424',
-        secondary: '#393A47',
-        accent: '#F13024',
+        // primary: '#131424',
+        // secondary: '#393A47',
+        // accent: '#F13024',
+        primary: '#000000',
+        secondary: '##110d1f',
+        accent: '#eab308',
       },
       backgroundImage: {
         explosion: 'url("/bg-explosion.png")',
