@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Hero from '/components/3D'
 
 // icons
 import {
@@ -6,16 +7,17 @@ import {
   FaCss3,
   FaJs,
   FaReact,
-  FaWordpress,
-  FaFigma,
 } from 'react-icons/fa';
 
 import {
   SiNextdotjs,
   SiFramer,
-  SiAdobexd,
-  SiAdobephotoshop,
+  SiThreedotjs,
+  SiGimp,
+  SiBlender,
+  SiDassaultsystemes,
 } from 'react-icons/si';
+
 
 //  about data
 export const aboutData = [
@@ -23,33 +25,20 @@ export const aboutData = [
     title: 'skills',
     info: [
       {
+        title: 'CAD solutions/3D modeling/UI/UX Design',
+        icons: [<SiDassaultsystemes key='second'/>, <SiBlender key='second'/>, <SiGimp key='second'/>],
+      },
+      {
         title: 'Web Development',
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiFramer />,
-          <FaWordpress />,
+          <FaHtml5 key='first'/>,
+          <FaCss3 key='first'/>,
+          <FaJs key='first'/>,
+          <FaReact key='first'/>,
+          <SiNextdotjs key='first'/>,
+          <SiFramer key='first'/>,
+          <SiThreedotjs key='first'/>,
         ],
-      },
-      {
-        title: 'UI/UX Design',
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
-      },
-    ],
-  },
-  {
-    title: 'awards',
-    info: [
-      {
-        title: 'Webby Awards - Honoree',
-        stage: '2011 - 2012',
-      },
-      {
-        title: 'Adobe Design Achievement Awards - Finalist',
-        stage: '2009 - 2010',
       },
     ],
   },
@@ -91,7 +80,6 @@ export const aboutData = [
 
 // components
 import Avatar from '../../components/Avatar';
-import Circles from '../../components/Circles';
 
 // framer motion
 import { motion } from 'framer-motion';
@@ -112,7 +100,7 @@ const About = () => {
         initial='hidden'
         animate='show'
         exit='hidden'
-        className='hidden xl:flex absolute bottom-0 -left-[370px]'
+        className='hidden xl:flex absolute bottom-{-10} -left-[370px]'
       >
         <Avatar />
       </motion.div>
@@ -233,6 +221,7 @@ const About = () => {
               );
             })}
           </div>
+        <Hero/>
         </motion.div>
       </div>
     </div>
