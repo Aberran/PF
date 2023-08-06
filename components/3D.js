@@ -1,7 +1,6 @@
 import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, TorusKnot } from "@react-three/drei";
-import * as THREE from "three";
 // import Model from './MiniModelMat';
 
 // raycast

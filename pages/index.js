@@ -15,7 +15,14 @@ import { fadeIn } from '../variants';
 const Home = () => {
   return (
     <div className='bg-primary/60 h-full'>
-      <ParticlesContainer />
+      <motion.div
+        variants={fadeIn(0.5)}
+        initial='hidden'
+        animate='show'
+        exit='hidden'
+      >
+        <ParticlesContainer />
+      </motion.div>
       {/* text */}
       <div className='w-full h-full bg-gradient-to-r from-primary via-black to-black'>
         <div className='text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto'>
@@ -62,7 +69,7 @@ const Home = () => {
         {/* bg img */}
         {/* <div className='bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0'></div> */}
         {/* particles */}
-        <ParticlesContainer />
+        {/* <ParticlesContainer /> */}
         {/* avatar img */}
         <motion.div
           variants={fadeIn('up', 0.5)}
